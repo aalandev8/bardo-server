@@ -44,7 +44,7 @@ const RRPPSchema = new Schema<rrppInterface>(
             required: true,
         },
         fecha_nacimiento: {
-            type: Date,
+            type: String,
             required: true,
         },
         estado: {
@@ -58,6 +58,6 @@ const RRPPSchema = new Schema<rrppInterface>(
     },
     { versionKey: false }
 );
-const RRPP = mongoose.model<rrppInterface & Document>('RRPP', RRPPSchema);
+const Person = mongoose.model<rrppInterface & Document>('Person', RRPPSchema);
 
-export default RRPP;
+export default Person;

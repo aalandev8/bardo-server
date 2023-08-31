@@ -13,7 +13,7 @@ export interface rrppInterface {
     correo: string;
     ciudad: string;
     coordinador: string;
-    fecha_nacimiento: Date;
+    fecha_nacimiento: string;
     estado: boolean;
     fiesta: string;
     
