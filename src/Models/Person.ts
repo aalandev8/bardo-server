@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { rrppInterface } from '../Interfaces/rrppInterface';
+import { PersonInterface } from '../Interfaces/PersonInterface';
 
-const RRPPSchema = new Schema<rrppInterface>(
+const PersonSchema = new Schema<PersonInterface>(
     {
         nombre: {
             type: String,
@@ -58,6 +58,6 @@ const RRPPSchema = new Schema<rrppInterface>(
     },
     { versionKey: false }
 );
-const Person = mongoose.model<rrppInterface & Document>('Person', RRPPSchema);
+const Person = mongoose.model<PersonInterface & Document>('Person', PersonSchema);
 
 export default Person;
