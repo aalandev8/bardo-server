@@ -1,8 +1,8 @@
 import { Router } from 'express'; 
-import { getRRPPs } from '../Controllers/RRPP.controller';
+import { getPersons } from '../Controllers/Person.controller';
 
-export const RRPPRouter = Router();
+export const PersonRouter = Router();
 
-RRPPRouter.get('/', getRRPPs);
+PersonRouter.get('/', getPersons);
 
-export default RRPPRouter;
+export default PersonRouter;

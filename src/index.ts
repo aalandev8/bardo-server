@@ -16,4 +16,4 @@ app.listen(PORT, () => {
 });
 
 // Rutas
-app.use('/api/RRPP', RRPPRoutes);
+app.use('/api/People', RRPPRoutes);
