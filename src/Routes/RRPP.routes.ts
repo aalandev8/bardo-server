@@ -1,8 +1,13 @@
 import { Router } from 'express'; 
-import { getPersons } from '../Controllers/Person.controller';
+import { getPeople } from '../Controllers/Person.controller';
+import { changePersonEstado } from '../Controllers/Person.controller';
 
 export const PersonRouter = Router();
 
-PersonRouter.get('/', getPersons);
+PersonRouter.get('/people', getPeople);
+
+
+PersonRouter.put('/:id', changePersonEstado);
+
 
 export default PersonRouter;
