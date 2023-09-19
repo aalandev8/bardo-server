@@ -1,12 +1,15 @@
 import dotenv from 'dotenv';
-import RRPPRoutes from './Routes/RRPP.routes';
+import PeopleRoutes from './Routes/People.routes';
 import { dbConnection } from './db';
+import cors from 'cors';
 
 const express = require('express');
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT;
+app.use(cors());
+
 
 dbConnection();
 
@@ -16,4 +19,4 @@ app.listen(PORT, () => {
 });
 
 // Rutas
-app.use('/api/v1', RRPPRoutes);
+app.use('/api/v1', PeopleRoutes);

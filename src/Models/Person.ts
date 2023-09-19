@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { PersonInterface } from '../Interfaces/PersonInterface';
+import { IPerson } from '../Interfaces/person.interface';
 
-const PersonSchema = new Schema<PersonInterface>(
+const PersonSchema = new Schema<IPerson>(
     {
         nombre: {
             type: String,
@@ -58,6 +58,6 @@ const PersonSchema = new Schema<PersonInterface>(
     },
     { versionKey: false }
 );
-const Person = mongoose.model<PersonInterface & Document>('Person', PersonSchema);
+const Person = mongoose.model<IPerson & Document>('Person', PersonSchema);
 
 export default Person;

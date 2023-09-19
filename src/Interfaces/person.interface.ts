@@ -1,6 +1,6 @@
 import { Types } from 'mongoose';
 
-export interface PersonInterface {
+export interface IPerson {
     
     _id?: Types.ObjectId;
     nombre: string;
